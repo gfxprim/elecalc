@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=elecalc
+GenericName=Electrical Calculator
+Version=1.0
+Comment=Electrical Calculator
+Exec=elecalc
+Icon=/usr/share/elecalc/elecalc.png
+Terminal=false
+Type=Application
+Categories=Science;Electricity;

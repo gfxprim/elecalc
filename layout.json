@@ -1,0 +1,89 @@
+{
+ "info": {"version": 1, "license": "GPL-2.1-or-later", "author": "Cyril Hrubis <metan@ucw.cz>"},
+ "layout": {
+  "type": "tabs",
+  "labels": ["Ohm law", "Wire resistance"],
+  "widgets": [
+   {"type": "vbox", "align": "hfill",
+    "widgets": [
+     {"type": "frame", "title": "Ohm law", "align": "hfill", "widget": {
+       "rows": 4, "cols": 3,
+       "widgets": [
+        {"type": "label", "text": "I"},
+        {"type": "label", "text": "U"},
+        {"type": "label", "text": "R"},
+        {"type": "label", "text": "P"},
+        {"type": "tbox", "len": 12, "help": "Current", "uid": "ohm_i"},
+        {"type": "tbox", "len": 12, "help": "Voltage", "uid": "ohm_u"},
+        {"type": "tbox", "len": 12, "help": "Resistance", "uid": "ohm_r"},
+        {"type": "tbox", "len": 12, "help": "Power", "uid": "ohm_p"},
+        {"type": "spinbutton", "desc": "units_current_desc", "selected": "A", "align": "hfill", "uid": "ohm_i_unit"},
+        {"type": "spinbutton", "desc": "units_voltage_desc", "selected": "V", "align": "hfill", "uid": "ohm_u_unit"},
+        {"type": "spinbutton", "desc": "units_resistance_desc", "selected": "\u03a9", "align": "hfill", "uid": "ohm_r_unit"},
+        {"type": "spinbutton", "desc": "units_power_desc", "selected": "W", "align": "hfill", "uid": "ohm_p_unit"}
+       ]
+      }
+     }
+    ]
+   },
+   {"type": "vbox",
+    "widgets": [
+     {"rows": 4, "cols": 3,
+      "widgets": [
+       {"type": "label", "text": "l"},
+       {"type": "label", "text": "S"},
+       {"type": "label", "text": "D"},
+       {"type": "label", "text": "\u03a9"},
+       {"type": "tbox", "len": 12, "help": "length", "uid": "length"},
+       {"type": "tbox", "len": 12, "help": "area", "uid": "area"},
+       {"type": "tbox", "len": 12, "help": "diameter", "uid": "diameter"},
+       {"type": "tbox", "len": 12, "help": "resistance", "uid": "resistance"},
+       {"type": "spinbutton", "desc": "units_len_desc", "selected": "m", "align": "hfill", "uid": "unit_length"},
+       {"type": "spinbutton", "desc": "units_area_desc", "selected": "mm\u00b2", "align": "hfill", "uid": "unit_area"},
+       {"type": "spinbutton", "desc": "units_len_desc", "selected": "mm", "align": "hfill", "uid": "unit_diameter"},
+       {"type": "spinbutton", "desc": "units_material_desc", "align": "hfill", "uid": "material"}
+      ]
+     },
+     {"type": "frame", "title": "result", "halign": "fill",
+      "widget": {
+       "cols": 2, "rows": 4, "align": "hfill", "rpad": "5 * 0", "cfill": "0, 1",
+       "widgets": [
+        {"type": "label", "text": "Resistance:", "align": "fill", "tattr": "right"},
+        {"type": "label", "text": "Circle Diameter:", "align": "fill", "tattr": "right"},
+        {"type": "label", "text": "Area:", "align": "fill", "tattr": "right"},
+        {"type": "label", "text": "Mass:", "align": "fill", "tattr": "right"},
+
+        {"type": "label", "text": "---", "uid": "res_resistance", "tattr": "center"},
+        {"type": "label", "text": "---", "uid": "res_diameter", "tattr": "center"},
+        {"type": "label", "text": "---", "uid": "res_area", "tattr": "center"},
+        {"type": "label", "text": "---", "uid": "res_mass", "tattr": "center"}
+       ]
+      }
+     },
+     {"type": "frame", "title": "material", "halign": "fill",
+      "widget": {
+       "type": "vbox",
+        "widgets": [
+         {"cols": 2, "rows": 4, "align": "hfill", "rpad": "5 * 0", "cfill": "0, 1",
+          "widgets": [
+           {"type": "label", "text": "Material:", "align": "fill", "tattr": "right"},
+           {"type": "label", "text": "Resistivity", "align": "fill", "tattr": "right"},
+           {"type": "label", "text": "Resistivity TC:", "align": "fill", "tattr": "right"},
+           {"type": "label", "text": "Density:", "align": "fill", "tattr": "right"},
+
+           {"type": "label", "text": "---", "uid": "material_name", "tattr": "center"},
+           {"type": "label", "text": "---", "uid": "material_r", "tattr": "center"},
+           {"type": "label", "text": "---", "uid": "material_tc", "tattr": "center"},
+           {"type": "label", "text": "---", "uid": "material_density", "tattr": "center"}
+          ]
+         },
+         {"type": "label", "text": "---", "uid": "material_comp", "tattr": "center"}
+        ],
+       "padd": "3 * 0"
+      }
+     }
+    ]
+   }
+  ]
+ }
+}
