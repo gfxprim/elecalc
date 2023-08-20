@@ -1,0 +1,4 @@
+usr/bin/elecalc
+etc/gp_apps/elecalc/*
+usr/share/applications/elecalc.desktop
+usr/share/elecalc/elecalc.png
