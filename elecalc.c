@@ -12,7 +12,7 @@
 #include "libelec.h"
 #include "ohm_law.h"
 
-static gp_app_info app_info = {
+gp_app_info app_info = {
 	.name = "elecalc",
 	.desc = "An electrical calculator",
 	.version = "1.0",
@@ -320,8 +320,6 @@ int main(int argc, char *argv[])
 	gp_htable *uids;
 	gp_widget *layout = gp_app_layout_load("elecalc", &uids);
 
-	gp_app_info_set(&app_info);
-
 	ohm_law_init(uids);
 
 	resistance_ui.resistance = gp_widget_by_uid(uids, "resistance", GP_WIDGET_TBOX);
@@ -357,7 +355,7 @@ int main(int argc, char *argv[])
 
 	update_material_info(resistance_ui.material, &resistance_ui);
 
-	gp_widgets_main_loop(layout, "elecalc", NULL, argc, argv);
+	gp_widgets_main_loop(layout, NULL, argc, argv);
 
 	return 0;
 }
