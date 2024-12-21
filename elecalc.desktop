@@ -7,4 +7,4 @@ Exec=elecalc
 Icon=/usr/share/elecalc/elecalc.png
 Terminal=false
 Type=Application
-Categories=Science;Electricity;
+Categories=Education;Electricity;
